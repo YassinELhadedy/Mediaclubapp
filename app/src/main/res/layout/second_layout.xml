@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:paddingTop="16dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:src="@drawable/album10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elsougl"
+        android:text="El Shoghl"
+        android:textSize="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignTop="@+id/img_profile"
+        android:layout_toEndOf="@+id/img_profile"
+        android:layout_marginTop="11dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pending"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+
+
+        android:layout_alignStart="@+id/elsougl"
+        android:layout_below="@+id/elsougl"
+        android:id="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:text="Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/img_profile"
+        android:layout_alignStart="@+id/img_profile" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/money"
+        android:text="100"
+        android:textSize="15dp"
+
+        android:layout_alignBottom="@+id/amount"
+        android:layout_toEndOf="@+id/members"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/egp"
+        android:text="EGP"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+
+        android:textSize="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignBottom="@+id/money"
+        android:layout_toEndOf="@+id/money" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/periodic"
+        android:text="Peridoic Time"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/egp"
+        android:layout_alignBottom="@+id/egp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="16dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Montly"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:id="@+id/montly"
+        android:layout_marginStart="16dp"
+        android:layout_alignBaseline="@+id/periodic"
+        android:layout_alignBottom="@+id/periodic"
+        android:layout_toEndOf="@+id/periodic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/members"
+        android:text="members"
+        android:layout_below="@+id/amount"
+        android:layout_alignStart="@+id/amount"
+        android:layout_marginTop="18dp" />
+    <View
+        android:background="#737373"
+        android:layout_width="fill_parent"
+        android:id="@+id/line1"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/members"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addmembers"
+
+        android:text="Add Members"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        android:id="@+id/imageView1"
+
+
+        android:layout_below="@+id/line1"
+        android:layout_toEndOf="@+id/members" />
+    <View
+        android:background="#737373"
+        android:layout_width="fill_parent"
+        android:id="@+id/line2"
+        android:layout_height="1dp"
+      android:layout_below="@id/imageView1"
+       />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/line2"
+        android:id="@+id/frame"
+
+       >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            android:id="@+id/recycleview">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </FrameLayout>
+    <View
+        android:background="#737373"
+        android:layout_width="fill_parent"
+        android:id="@+id/line3"
+        android:layout_height="1dp"
+        android:layout_below="@id/frame"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remove"
+        android:text="yassin elhadedy"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/line3"
+       android:layout_alignStart="@+id/amount" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        android:scaleY="0.5"
+        android:scaleX="0.7"
+
+        android:layout_below="@+id/line3"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/remove" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:id="@+id/removestatus"
+        android:layout_above="@+id/line4"
+        android:layout_toEndOf="@+id/elsougl"
+        android:layout_alignStart="@+id/periodic"
+        android:layout_alignTop="@+id/remove" />
+
+    <View
+        android:background="#737373"
+        android:layout_width="fill_parent"
+        android:id="@+id/line4"
+        android:layout_height="1dp"
+        android:layout_below="@id/remove"
+        />
+
+    <Button
+        android:id="@+id/removebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="remove"
+        android:background="@color/colorPrimary"
+
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/frame"
+        android:layout_alignBottom="@+id/line4"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/addmembers"/>
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toEndOf="@id/remove"
+    android:layout_toStartOf="@id/removebtn"
+    android:id="@+id/contine"
+    android:scaleY="0.8"
+    android:background="@color/colorPrimary"
+    android:text="continue"
+    android:layout_below="@+id/imageView2"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="25dp" />
+
+
+</RelativeLayout>

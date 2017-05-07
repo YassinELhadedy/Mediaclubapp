@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:paddingTop="16dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:src="@drawable/album10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elsougl"
+        android:text="El Shoghl"
+        android:textSize="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_alignTop="@+id/img_profile"
+        android:layout_toEndOf="@+id/img_profile"
+        android:layout_marginTop="11dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pending"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+
+
+        android:layout_alignStart="@+id/elsougl"
+        android:layout_below="@+id/elsougl"
+        android:id="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:text="Amount"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/img_profile"
+        android:layout_alignStart="@+id/img_profile" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/money"
+        android:text="100"
+        android:textSize="15dp"
+
+        android:layout_above="@+id/members"
+        android:layout_toStartOf="@+id/textView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/egp"
+        android:text="EGP"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+
+        android:textSize="15dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignBottom="@+id/money"
+        android:layout_toEndOf="@+id/money" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/periodic"
+        android:text="Peridoic Time"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/egp"
+        android:layout_alignBottom="@+id/egp"
+        android:layout_toEndOf="@+id/textView"
+        android:layout_marginStart="16dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Montly"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:id="@+id/montly"
+        android:layout_marginStart="16dp"
+        android:layout_alignBaseline="@+id/periodic"
+        android:layout_alignBottom="@+id/periodic"
+        android:layout_toEndOf="@+id/periodic" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/members"
+        android:textSize="18dp"
+        android:text="Set Starting Date"
+        android:layout_below="@+id/amount"
+        android:layout_alignStart="@+id/amount"
+        android:layout_marginTop="18dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:text="7/5/2017"
+        android:layout_toStartOf="@id/periodic"
+        android:textSize="20dp"
+        android:layout_below="@+id/members"
+        android:layout_alignStart="@+id/members" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sort"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Set The Schcdual"
+        android:layout_below="@+id/date"
+        android:layout_alignStart="@+id/date" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/start"
+        android:layout_toEndOf="@id/sort"
+        android:layout_toStartOf="@id/montly"
+        android:layout_marginEnd="10dp"
+        android:text="start"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/sort"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@id/start"></FrameLayout>
+
+</RelativeLayout>

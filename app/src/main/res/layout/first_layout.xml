@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:paddingTop="16dp"
+        app:srcCompat="@android:drawable/sym_def_app_icon"
+        android:src="@drawable/album10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Photo"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="4dp"
+        android:textSize="12dp"
+        android:layout_below="@+id/img_profile"
+        android:layout_alignStart="@+id/img_profile"
+        android:id="@+id/textView2" />
+    <EditText
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:hint="Gamayaa  Name "
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/img_profile"
+        android:layout_marginBottom="11dp"
+        android:layout_alignEnd="@+id/amount"
+        android:layout_toEndOf="@+id/img_profile"
+        android:id="@+id/editText" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Amount"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/amount"
+
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EGP"
+        android:textSize="20dp"
+
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_alignBaseline="@+id/amount"
+        android:layout_alignBottom="@+id/amount"
+        android:layout_alignEnd="@+id/amount"
+        android:id="@+id/textView" />
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+
+        android:weightSum="1"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/amount">
+
+        <RadioButton
+            android:id="@+id/radio_pirates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="30dp"
+            android:layout_weight="0.11"
+
+            android:onClick="onRadioButtonClicked"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+
+            android:text="Montly" />
+
+        <RadioButton
+            android:id="@+id/radio_ninjas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:text="Weekly"
+            android:layout_marginStart="45dp"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/remindr"
+        android:text="Reminder"
+        android:textSize="18dp"
+
+        android:textStyle="bold"
+        android:layout_marginStart="33dp"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignStart="@+id/radioGroup"
+        android:layout_marginTop="58dp" />
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+
+
+        android:layout_alignBottom="@+id/remindr"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/days"
+        android:text="Days"
+        android:textStyle="bold"
+
+        android:textSize="18dp" android:layout_alignBottom="@+id/spinner1"
+        android:layout_toEndOf="@+id/spinner1" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="next"
+        android:textSize="12dp"
+        android:textStyle="normal"
+        android:scaleX="1.5"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:id="@+id/button"
+        android:layout_below="@+id/spinner1"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+</RelativeLayout>

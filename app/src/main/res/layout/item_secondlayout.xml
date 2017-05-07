@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:background="#737373"
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="0dp"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yassin elhadedy"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true" />
+    <View
+        android:background="#737373"
+        android:id="@+id/line2"
+        android:layout_width="1dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line3"
+        android:layout_marginBottom="0dp"
+
+        />
+    <View
+        android:background="#737373"
+        android:layout_height="wrap_content"
+        android:id="@+id/line5"
+        android:layout_width="1dp"
+       android:layout_alignTop="@id/username"
+        android:layout_toEndOf="@id/username"
+        android:layout_alignBottom="@+id/line3"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/status"
+        android:text="pending"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        android:layout_alignBaseline="@+id/username"
+        android:layout_alignBottom="@+id/username"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/status"
+        android:layout_marginStart="36dp"
+        android:layout_toEndOf="@+id/line2"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+    <View
+        android:background="#737373"
+        android:id="@+id/line3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="0dp"/>
+
+
+</RelativeLayout>
